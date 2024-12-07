@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perspective Capture</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <video id="video" autoplay playsinline></video>
+        <canvas id="canvas" style="display: none;"></canvas>
+        <div id="orientation-data">
+            Yaw: <span id="yaw">0</span>°<br>
+            Pitch: <span id="pitch">0</span>°<br>
+            Roll: <span id="roll">0</span>°
+        </div>
+        <button id="capture">Capture</button>
+    </div>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
